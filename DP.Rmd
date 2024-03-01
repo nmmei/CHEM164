@@ -13,5 +13,9 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 
 ```{r}
 library(tidyverse,ggplot2)
-```
+install.packages("readxl")
+install.packages("ggplot2")
+install.packages("extrafont")
+install.packages("reshape2")
 
+```
