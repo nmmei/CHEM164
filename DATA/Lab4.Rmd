@@ -1,0 +1,18 @@
+---
+title: "Lab 4 Data"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.
+
+```{r}
+library(tidyverse
+      )
+```
+
+```{r}
+df_lab4 <- read.csv("Lab4 Data.csv")
+
+str(df_lab4)
+summary(df_lab4)
+```
