@@ -11,7 +11,7 @@
 
 
 
-<title>R Notebook</title>
+<title>Data Process</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1746,7 +1746,7 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">R Notebook</h1>
+<h1 class="title toc-ignore">Data Process</h1>
 
 </div>
 
@@ -1767,31 +1767,17 @@ run any R code chunks. Instead, the output of the chunk when it was last
 run in the editor is displayed.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcInJlc2hhcGUyXCIpXG5cbmBgYCJ9 -->
-<pre class="r"><code>install.packages(&quot;reshape2&quot;)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UsZ2dwbG90Milcbmluc3RhbGwucGFja2FnZXMoXCJyZWFkeGxcIilcbmluc3RhbGwucGFja2FnZXMoXCJnZ3Bsb3QyXCIpXG5pbnN0YWxsLnBhY2thZ2VzKFwiZXh0cmFmb250XCIpXG5pbnN0YWxsLnBhY2thZ2VzKFwicmVzaGFwZTJcIilcblxuYGBgIn0= -->
+<pre class="r"><code>library(tidyverse,ggplot2)
+install.packages(&quot;readxl&quot;)
+install.packages(&quot;ggplot2&quot;)
+install.packages(&quot;extrafont&quot;)
+install.packages(&quot;reshape2&quot;)
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiYWxzbyBpbnN0YWxsaW5nIHRoZSBkZXBlbmRlbmN5IOKAmHBseXLigJlcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvYmlnLXN1ci1hcm02NC9jb250cmliLzQuMy9wbHlyXzEuOC45LnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggMTAxNjIxMiBieXRlcyAoOTkyIEtCKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgOTkyIEtCXG5cbnRyeWluZyBVUkwgJ2h0dHBzOi8vY3Jhbi5yc3R1ZGlvLmNvbS9iaW4vbWFjb3N4L2JpZy1zdXItYXJtNjQvY29udHJpYi80LjMvcmVzaGFwZTJfMS40LjQudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAzMzg1NTEgYnl0ZXMgKDMzMCBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDMzMCBLQlxuIn0= -->
-<pre><code>also installing the dependency ‘plyr’
-
-trying URL &#39;https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.3/plyr_1.8.9.tgz&#39;
-Content type &#39;application/x-gzip&#39; length 1016212 bytes (992 KB)
-==================================================
-downloaded 992 KB
-
-trying URL &#39;https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.3/reshape2_1.4.4.tgz&#39;
-Content type &#39;application/x-gzip&#39; length 338551 bytes (330 KB)
-==================================================
-downloaded 330 KB</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy85OS9icTR5c2c2ZDY5djE4bDU1dHBqdjkyZDQwMDAwZ24vVC8vUnRtcFR3emtySC9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
-<pre><code>
-The downloaded binary packages are in
-    /var/folders/99/bq4ysg6d69v18l55tpjv92d40000gn/T//RtmpTwzkrH/downloaded_packages</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gCgpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ21kK1NoaWZ0K0VudGVyKi4gCgpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkNtZCtTaGlmdCtLKiB0byBwcmV2aWV3IHRoZSBIVE1MIGZpbGUpLiAKClRoZSBwcmV2aWV3IHNob3dzIHlvdSBhIHJlbmRlcmVkIEhUTUwgY29weSBvZiB0aGUgY29udGVudHMgb2YgdGhlIGVkaXRvci4gQ29uc2VxdWVudGx5LCB1bmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBSIGNvZGUgY2h1bmtzLiBJbnN0ZWFkLCB0aGUgb3V0cHV0IG9mIHRoZSBjaHVuayB3aGVuIGl0IHdhcyBsYXN0IHJ1biBpbiB0aGUgZWRpdG9yIGlzIGRpc3BsYXllZC4KCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSxnZ3Bsb3QyKQppbnN0YWxsLnBhY2thZ2VzKCJyZWFkeGwiKQppbnN0YWxsLnBhY2thZ2VzKCJnZ3Bsb3QyIikKaW5zdGFsbC5wYWNrYWdlcygiZXh0cmFmb250IikKaW5zdGFsbC5wYWNrYWdlcygicmVzaGFwZTIiKQoKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRGF0YSBQcm9jZXNzIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiAKClRyeSBleGVjdXRpbmcgdGhpcyBjaHVuayBieSBjbGlja2luZyB0aGUgKlJ1biogYnV0dG9uIHdpdGhpbiB0aGUgY2h1bmsgb3IgYnkgcGxhY2luZyB5b3VyIGN1cnNvciBpbnNpZGUgaXQgYW5kIHByZXNzaW5nICpDbWQrU2hpZnQrRW50ZXIqLiAKCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ21kK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuIAoKVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLgoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlLGdncGxvdDIpCmluc3RhbGwucGFja2FnZXMoInJlYWR4bCIpCmluc3RhbGwucGFja2FnZXMoImdncGxvdDIiKQppbnN0YWxsLnBhY2thZ2VzKCJleHRyYWZvbnQiKQppbnN0YWxsLnBhY2thZ2VzKCJyZXNoYXBlMiIpCgpgYGAK</div>
 
 
 
